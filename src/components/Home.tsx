@@ -3,7 +3,7 @@ import React from "react"
 
 function Home(){
     return <div>
-       <h2 classname="container is-widescreen">Adopt a Cat</h2>
+       <h2 className="container is-widescreen">Adopt a Cat</h2>
     </div>
 
 }
