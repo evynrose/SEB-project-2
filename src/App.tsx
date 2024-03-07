@@ -4,8 +4,18 @@ import Home from "./components/Home"
 import catBreeds from "./components/Catbreeds"
 import.meta.env.VITE_API_KEY
 
+//create variables for use within our code 
+const [catInfo, setCatInfo] = React.useState('null')
+const [search, setSearch] = React.useState('null')
+
 function App() {
-  return <h1>Hello World</h1>
+  return <Router>
+    <main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </main>
+  </Router>
 }
 
 export default App
