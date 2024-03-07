@@ -16,7 +16,16 @@ function CatBreeds() {
 
     React.useEffect(() => {
 
-        fetch("https://api.thecatapi.com/v1/breeds")
+//         header: x-api-key
+// key: live_XICyWdeClBO3NsgdZuTEDKBembjywCyMwdyxm5Fv4dqBpsp41cyVUK3VdERxG1ic
+
+        fetch("https://api.thecatapi.com/v1/breeds",  {
+  method: "GET",
+  headers: {
+    "x-api-key":  import.meta.env.VITE_API_KEY, 
+    "Content-Type": "application/json"
+  }
+})
             .then(res => res.json())
             .then(data => setCats(data))
     }, [])
@@ -26,10 +35,11 @@ function CatBreeds() {
             <div className="container">
                 <div className="columns is-multiline">
                     {cats?.map(cat => {
+                        console.log(cat)
                         return <div key={cat.name} className="column is-one-quarter-desktop is-one-third-tablet">
                             <CatCards
                                 name={cat.name}
-                                image={cat.image}
+                                image={cat.image?.url}
                                 origin={cat.origin}
                                 temperament={cat.temperament}
                             />
