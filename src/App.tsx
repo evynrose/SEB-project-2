@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./components/Home"
 import CatBreeds from "./components/Catbreeds"
 import Navbar from "./components/Navbar"
-import.meta.env.VITE_API_KEY
 
 //create variables for use within our code 
 // const [catInfo, setCatInfo] = React.useState('null')
