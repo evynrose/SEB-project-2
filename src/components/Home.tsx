@@ -8,17 +8,17 @@ import { Link } from "react-router-dom"
 // }
 
 function Home() {
-  return (
-    <section className="hero is-fullheight-with-navbar is-warning">
-      <div className="hero-body">
-        <div className="container has-text-centered">
-          <h2 className="title is-1 has-text-centered has-text-black">
-            Welcome to Adopt-a-Cat
-          </h2>
-        </div>
-      </div>
-    </section>
-  )
+    return (
+        <section className="hero is-fullheight-with-navbar is-warning">
+            <div className="hero-body">
+                <div className="container has-text-centered">
+                    <h2 className="title is-1 has-text-centered has-text-black">
+                        Welcome to Future FurBaby!
+                    </h2>
+                </div>
+            </div>
+        </section>
+    )
 }
 export default Home
 
