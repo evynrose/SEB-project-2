@@ -1,15 +1,10 @@
 import { Link } from "react-router-dom"
 import juno from "../photos/juno.png"
-// function Home() {
-//     return <div>
-//         <h2 className="container is-widescreen">Adopt a Cat</h2>
-//     </div>
 
-// }
 
 function Home() {
     return (
-        <section className="hero is-primary height-with-navbar is-success">
+        <section className="hero is-primary height-with-navbar is-danger">
             <div className="hero-body">
                 <div className="container has-text-centered">
                     <h2 className="title is-1 has-text-centered has-text-white">
@@ -31,8 +26,4 @@ function Home() {
 }
 export default Home
 
-// Header 
-// img 
-// <h2> 
-// Body 
-// Footer 
+// JSX to create the homepage along with Bulma CSS. 

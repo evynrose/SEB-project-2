@@ -21,4 +21,6 @@ function Navbar() {
   )
 }
 
+//JSX and Bulma to create our navbar. 
+
 export default Navbar

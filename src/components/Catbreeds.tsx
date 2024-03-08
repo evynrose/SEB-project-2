@@ -5,20 +5,19 @@ import React from "react";
 interface Cats {
     "name": string
     "image": string | any
-    "origin": string
     "temperament": string
 }
 
+//TypeScript for each element
 
+//Function to set cats and search bar
 function CatBreeds() {
 
     const [cats, setCats] = React.useState<null | Array<Cats>>(null)
     const [search, setSearch] = React.useState('')
 
     React.useEffect(() => {
-
-        //         header: x-api-key
-        // key: live_XICyWdeClBO3NsgdZuTEDKBembjywCyMwdyxm5Fv4dqBpsp41cyVUK3VdERxG1ic
+        // we useeffect to load the display upon the page being first loaded.
 
         fetch("https://api.thecatapi.com/v1/breeds", {
             method: "GET",
@@ -40,7 +39,7 @@ function CatBreeds() {
             return cat.name.toLowerCase().includes(search.toLowerCase())
         })
     }
-
+    //functions to make the search bar work as well as allow the user to filter cats by their search.
 
 
     return (
@@ -60,7 +59,7 @@ function CatBreeds() {
                             <CatCards
                                 name={cat.name}
                                 image={cat.image?.url}
-                                origin={cat.origin}
+
                                 temperament={cat.temperament}
                             />
 
@@ -72,6 +71,8 @@ function CatBreeds() {
         </section>
     );
 };
+
+// code to make the cat cards have the information needed on them. 
 
 export default CatBreeds
 
